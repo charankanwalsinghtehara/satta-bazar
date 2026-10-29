@@ -1,0 +1,22 @@
+[project]
+name = "satta-bazar"
+version = "0.1.0"
+description = "A meme-driven virtual stock market game."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.development"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+testpaths = ["apps"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", "venv", "staticfiles", "migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"config/settings/*.py" = ["F403", "F405"]
+"config/asgi.py" = ["E402"]
