@@ -5,3 +5,5 @@ channels==4.3.2
 daphne==4.2.3
 inflection==0.5.1
 uritemplate==4.2.0
+dj-database-url
+psycopg[binary]
